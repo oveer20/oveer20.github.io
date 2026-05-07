@@ -37,8 +37,18 @@ header h1 {
   font-weight: 500;
 }
 
+.subtitle-light {
+  font-size: 0.95rem;
+  color: #718096;
+  margin-top: 4px;
+}
+
 .badge {
   margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .badge img {
@@ -56,7 +66,7 @@ section {
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: #0f3460;
   border-bottom: 3px solid #0f3460;
   padding-bottom: 8px;
@@ -66,6 +76,18 @@ h2 {
 p {
   color: #4a5568;
   margin-bottom: 12px;
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.95rem;
 }
 
 .card-list {
@@ -80,10 +102,22 @@ p {
   border-radius: 12px;
   padding: 20px;
   transition: box-shadow 0.2s;
+  position: relative;
 }
 
 .card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f3460;
+  background: #ebf4ff;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
 }
 
 .card h3 {
@@ -91,12 +125,14 @@ p {
   font-weight: 600;
   margin-bottom: 4px;
   color: #1a1a2e;
+  line-height: 1.4;
 }
 
 .meta {
   font-size: 0.85rem;
   color: #718096;
-  margin-bottom: 0;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .timeline-item {
@@ -105,16 +141,60 @@ p {
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 16px;
+  border-left: 4px solid #0f3460;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f3460;
+  background: #ebf4ff;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .timeline-item h3 {
   font-size: 1.05rem;
   font-weight: 600;
   color: #1a1a2e;
+  margin-bottom: 4px;
 }
 
 .timeline-item p {
   font-size: 0.95rem;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cert-tag {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  color: #4a5568;
+  transition: all 0.2s;
+}
+
+.cert-tag:hover {
+  border-color: #0f3460;
+  color: #0f3460;
+  background: #ebf4ff;
+}
+
+.contact-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -126,10 +206,22 @@ p {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.2s;
+  border: 2px solid #0f3460;
 }
 
 .button:hover {
   background: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.button-outline {
+  background: transparent;
+  color: #0f3460;
+}
+
+.button-outline:hover {
+  background: #0f3460;
+  color: #fff;
 }
 
 footer {
@@ -148,4 +240,6 @@ footer p {
 @media (max-width: 600px) {
   header h1 { font-size: 1.8rem; }
   .card-list { grid-template-columns: 1fr; }
+  .info-grid { flex-direction: column; gap: 8px; }
+  header { padding: 40px 0 32px; }
 }
